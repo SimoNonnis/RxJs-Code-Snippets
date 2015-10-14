@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+  <title>Code1 | RxJs</title>
+
+
+<link href="lib/highlight/styles/atelier-forest.dark.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+<script src="lib/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="lib/rx.all.3.0.js"></script>
+<script src="lib/babel.js"></script>
+
+
+<script>
+  const newReleases = [
+    {
+      "id": 1,
+      "title": "Die Hard",
+      "boxart": "http://cdn-0.nflximg.com/images/2891/DieHard.jpg",
+      "uri": "http://api.netflix.com/catalog/titles/movies/70111470",
+      "rating": [4.0],
+      "bookmark": []
+    },
+    {
+      "id": 2,
+      "title": "Bad Boys",
+      "boxart": "http://cdn-0.nflximg.com/images/2891/BadBoys.jpg",
+      "uri": "http://api.netflix.com/catalog/titles/movies/70111470",
+      "rating": [5.0],
+      "bookmark": [{ id:432534, time:65876586 }]
+    },
+    {
+      "id": 3,
+      "title": "Fracture",
+      "boxart": "http://cdn-0.nflximg.com/images/2891/Fracture.jpg",
+      "uri": "http://api.netflix.com/catalog/titles/movies/70111470",
+      "rating": [5.0],
+      "bookmark": [{ id:432534, time:65876586 }]
+    }
+  ];
+
+  function foo (arg) {
+    return arg.map(x => ({title: x.title, id: x.id}));
+  }
+
+  console.log(foo(newReleases));  
+</script>
+
+</head>
+<body>
+
+<a href="http://reactivex.io/" target="_blank">
+  <img class="rx_logo"src="img/rx_logo.png">
+</a>
+
+<div class="aligner">
+<pre>
+<code class="javascript">
+  
+  // Use map() to project an array of videos 
+  // into an array of {id,title} pairs.
+  // Look at console to see code executed
+  
+  const newReleases = [
+    {
+      "id": 1,
+      "title": "Die Hard",
+      "boxart": "http://cdn-0.nflximg.com/images/2891/DieHard.jpg",
+      "uri": "http://api.netflix.com/catalog/titles/movies/70111470",
+      "rating": [4.0],
+      "bookmark": []
+    },
+    {
+      "id": 2,
+      "title": "Bad Boys",
+      "boxart": "http://cdn-0.nflximg.com/images/2891/BadBoys.jpg",
+      "uri": "http://api.netflix.com/catalog/titles/movies/70111470",
+      "rating": [5.0],
+      "bookmark": [{ id:432534, time:65876586 }]
+    },
+    {
+      "id": 3,
+      "title": "Fracture",
+      "boxart": "http://cdn-0.nflximg.com/images/2891/Fracture.jpg",
+      "uri": "http://api.netflix.com/catalog/titles/movies/70111470",
+      "rating": [5.0],
+      "bookmark": [{ id:432534, time:65876586 }]
+    }
+  ];
+
+  function foo (arg) {
+    return arg.map(x => ({title: x.title, id: x.id}));
+  }
+
+  console.log(foo(newReleases)); 
+
+</code>
+</pre>
+</div>
+
+</body>
+</html>
